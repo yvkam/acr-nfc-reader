@@ -21,11 +21,11 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package eu.verdelhan.acr122urw;
+package com.yvkam.acr;
 
-import static eu.verdelhan.acr122urw.HexUtils.bytesToHexString;
-import static eu.verdelhan.acr122urw.HexUtils.hexStringToBytes;
-import static eu.verdelhan.acr122urw.HexUtils.isHexString;
+import static com.yvkam.acr.HexUtils.bytesToHexString;
+import static com.yvkam.acr.HexUtils.hexStringToBytes;
+import static com.yvkam.acr.HexUtils.isHexString;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;

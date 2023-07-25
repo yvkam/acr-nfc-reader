@@ -21,7 +21,7 @@
  * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
  * SOFTWARE.
  */
-package eu.verdelhan.acr122urw;
+package com.yvkam.acr;
 
 import java.util.regex.Pattern;
 
