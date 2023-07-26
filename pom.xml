@@ -5,10 +5,19 @@
     <groupId>com.yvkam</groupId>
     <artifactId>acr-nfc-reader</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-
     <name>acr-nfc-reader</name>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>3.1.1</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
 
     <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
         <dependency>
             <groupId>org.nfctools</groupId>
             <artifactId>nfctools-core</artifactId>
@@ -19,11 +28,6 @@
                     <artifactId>slf4j-api</artifactId>
                 </exclusion>
             </exclusions>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-classic</artifactId>
-            <version>1.2.9</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -37,7 +41,11 @@
         <!-- Jar's final name -->
         <finalName>${project.artifactId}</finalName>
         <plugins>
-            
+
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
             <!-- Build source and target -->
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -71,7 +79,7 @@
                     <archive>
                         <manifest>
                             <!-- Main class -->
-                            <mainClass>com.yvkam.acr.Acr122Manager</mainClass>
+                            <mainClass>com.yvkam.acr.Acr122CLI</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>

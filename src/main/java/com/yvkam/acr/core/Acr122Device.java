@@ -1,12 +1,10 @@
-package com.yvkam.acr;
+package com.yvkam.acr.core;
 
 import java.io.IOException;
 import javax.smartcardio.CardTerminal;
 
 import lombok.extern.slf4j.Slf4j;
-import org.nfctools.mf.MfAccess;
 import org.nfctools.mf.MfCardListener;
-import org.nfctools.mf.block.MfBlock;
 import org.nfctools.spi.acs.Acr122ReaderWriter;
 import org.nfctools.spi.acs.AcsTerminal;
 import org.nfctools.utils.CardTerminalUtils;
@@ -14,7 +12,7 @@ import org.nfctools.utils.CardTerminalUtils;
 @Slf4j
 public class Acr122Device extends AcsTerminal {
     
-    private Acr122ReaderWriter readerWriter;
+    private final Acr122ReaderWriter readerWriter;
     
     public Acr122Device() {
         CardTerminal terminal = CardTerminalUtils.getTerminalByName("ACR122");
