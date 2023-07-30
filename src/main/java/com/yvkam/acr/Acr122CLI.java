@@ -186,9 +186,7 @@ public class Acr122CLI {
             throw new CardException("Error reading card.");
         }
 
-        String uid = HexUtils.bytesToHexString(response.getData());
-        card.disconnect(false);
-        return uid;
+        return HexUtils.bytesToHexString(response.getData());
     }
 
     private static void waitForCardRemoval(CardTerminal terminal) throws InterruptedException, CardException {

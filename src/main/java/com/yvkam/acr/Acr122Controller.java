@@ -13,6 +13,7 @@ public class Acr122Controller {
 
 
     @GetMapping("/acr122/read")
+    @CrossOrigin
     public Card getAll() {
         Card card = new Card();
         card.setUid(readCardUidOnce());
